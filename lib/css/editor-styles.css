@@ -40,7 +40,32 @@ body {
 .editor__body {
   flex: 1;
 }
+.editor__top {
+  display: flex;
+}
+.editor__top--left {
+  flex:1;
+  
+}
+.editor__top--right {
+  display: flex;
+  flex-direction: column;
+}
+.editor__top--right i {
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+.editor__tabs {
+  display: flex;
+  flex-direction: column;
+}
+.editor__settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 
+  /* border: 1px solid var(--editor-border) */
+}
 .editor__footer {
   display: flex;
 }

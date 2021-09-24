@@ -5,12 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="lib/css/editor-styles.css" />
-
+    <script
+      src="https://kit.fontawesome.com/65cb65796d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>MDN Code Editor</title>
   </head>
   <body>
     <div class="editor">
       <div class="editor__wrapper">
+        <div class="editor__top">
+          <div class="editor__top--left">
+            <div class="editor__tabs">
+              <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li
+                  id="addTabIcon"
+                  role="presentation"
+                  onclick="editor.addNewTab()"
+                >
+                  <a href="#"
+                    ><i class="fa fa-plus-square" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="editor__top--right">
+            <div class="editor__settings" id="editorSettings">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="editor__save" id="editorSave">
+              <i class="fas fa-save"></i>
+            </div>
+          </div>
+        </div>
+
         <div class="editor__body">
           <div id="editorCode" class="editor__code"></div>
         </div>
@@ -30,6 +66,7 @@
     <!-- Required Ace Libraries -->
     <script src="lib/ace-editor/src-min/ace.js"></script>
     <script src="lib/ace-editor/src-min/mode-javascript.js"></script>
+    <script src="lib/ace-editor/src-min/ext-language_tools.js"></script>
 
     <!-- Custom Scripts -->
     <script src="lib/js/editor.js"></script>
